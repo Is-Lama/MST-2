@@ -1,0 +1,78 @@
+.background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  overflow: hidden;
+}
+
+body {
+  background-color: #000;
+}
+
+.background-video {
+  position: fixed;
+  inset: 0;
+  width: 90vw;
+  height: 100vh;
+  margin-inline: auto;  
+  object-fit: cover;
+  z-index: 0;
+}
+
+.top-layer {
+  position: absolute;
+  padding: 10px;
+  width: 90vw;
+  margin-inline: auto;
+  inset: 0;
+  font-size: 7vw;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  z-index: 100;
+
+}
+
+.bottom-layer {
+  position: absolute;
+  padding: 10px;
+  width: 90vw;
+  margin-inline: auto;
+  inset: 0;
+  font-size: 7vw;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  background-color: #000;
+  mix-blend-mode: multiply;
+  z-index: 200;
+}
+
+.top-layer .span {
+  vertical-align: middle;
+  font-size: 4vw;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.bottom-layer .span {
+  vertical-align: middle;
+  font-size: 4vw;
+  background-color: #fff;
+}
+
+@media (max-width: 768px) {
+  .top-layer {
+    width: 90vw;
+    font-size: 11vw;
+  }
+
+  .bottom-layer {
+    width: 90vw;
+    font-size: 11vw;
+  }
+}
